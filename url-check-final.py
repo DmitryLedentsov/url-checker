@@ -10,7 +10,8 @@ class LinkChecker:
     def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000):
         self.base_url = self.normalize_url(base_url)
         self.domain = urlparse(self.base_url).netloc
-        self.visited = {}
+        self.visited = {}  # Хранит полные узлы
+        self.processed_urls = set()  # Отслеживает обработанные URL для предотвращения циклов
         self.delay = delay
         self.timeout = timeout
         self.url_count_limit = url_count_limit
@@ -72,9 +73,11 @@ class LinkChecker:
         root_node = {
             "url": self.base_url,
             "status": None,
+            "redirected_from": None,
             "links": []
         }
         self.visited[self.base_url] = root_node
+        self.processed_urls.add(self.base_url)  # Добавляем начальный URL как обработанный
 
         while queue and self.url_count < self.url_count_limit:
             current_url, depth = queue.popleft()
@@ -86,37 +89,37 @@ class LinkChecker:
             links, status, final_url = self.process_url(current_url)
             
             if final_url != current_url:
-                # Если есть редирект
                 if current_url in self.visited:
                     node = self.visited.pop(current_url)
                     node["url"] = final_url
-                    node["redirected_from"] = current_url  # Добавляем поле redirected_from
+                    node["redirected_from"] = current_url
                     self.visited[final_url] = node
                 else:
                     self.visited[final_url] = {
                         "url": final_url,
                         "status": status,
-                        "redirected_from": current_url,  # Добавляем поле redirected_from
+                        "redirected_from": current_url,
                         "links": []
                     }
             else:
-                # Если редиректа нет
                 self.visited[current_url]["status"] = status
                 if "redirected_from" not in self.visited[current_url]:
-                    self.visited[current_url]["redirected_from"] = None  # Устанавливаем None, если нет редиректа
+                    self.visited[current_url]["redirected_from"] = None
 
             time.sleep(self.delay)
 
             for link in links:
-                if link not in self.visited:
+                # Проверяем, не был ли этот URL уже обработан
+                if link not in self.processed_urls:
                     new_node = {
                         "url": link,
                         "status": None,
-                        "redirected_from": None,  # Инициализируем поле для новых ссылок
+                        "redirected_from": None,
                         "links": []
                     }
                     self.visited[final_url]["links"].append(new_node)
                     self.visited[link] = new_node
+                    self.processed_urls.add(link)  # Помечаем как обработанный
                     if depth + 1 <= self.depth_limit:
                         queue.append((link, depth + 1))
 
@@ -141,7 +144,7 @@ def main():
     parser.add_argument('--delay', type=float, default=1, help='Задержка между запросами (секунды)')
     parser.add_argument('--timeout', type=float, default=50, help='Таймаут запроса (секунды)')
     parser.add_argument('--url-count-limit', type=int, default=1000000, help='Лимит URL для проверки')
-    parser.add_argument('--depth-limit', type=int, default=10000000, help='Максимальная глубина проверки')
+    parser.add_argument('--depth-limit', type=int, default=1000, help='Максимальная глубина проверки')
     
     args = parser.parse_args()
 

@@ -12,12 +12,12 @@ def build_tree(data, parent_node=None):
     """Рекурсивно строит дерево из данных sitemap"""
     if parent_node is None:
         root = Node(f"{data['url']} ({data['status']})")
-        for child in data['redirects']:
+        for child in data['links']:
             build_tree(child, root)
         return root
     else:
         child_node = Node(f"{data['url']} ({data['status']})", parent=parent_node)
-        for child in data['redirects']:
+        for child in data['links']:
             build_tree(child, child_node)
 
 def visualize_tree(tree, output_format='text'):
