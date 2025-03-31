@@ -5,7 +5,6 @@ from urllib.parse import urljoin, urlparse, urldefrag
 import time
 import sqlite3
 import json
-from collections import deque
 import sys
 import os
 from requests.exceptions import RequestException
@@ -28,7 +27,6 @@ class LinkChecker:
 
     def _init_db(self):
         """Инициализация SQLite базы данных"""
-        # Если база существует, продолжаем с ней работать
         if not os.path.exists(self.db_path):
             with sqlite3.connect(self.db_path) as conn:
                 c = conn.cursor()
@@ -37,7 +35,8 @@ class LinkChecker:
                         url TEXT PRIMARY KEY,
                         status TEXT,
                         redirected_from TEXT,
-                        parent_url TEXT
+                        parent_url TEXT,
+                        depth INTEGER
                     )
                 ''')
                 c.execute('''
@@ -79,7 +78,8 @@ class LinkChecker:
             
             links = set()
             if status_code == 200:
-                soup = BeautifulSoup(response.text, 'html.parser')
+                # Ограничиваем объем данных для парсинга
+                soup = BeautifulSoup(response.text[:1024*1024], 'html.parser')  # Ограничиваем до 1MB
                 for link in soup.find_all('a', href=True):
                     absolute_url = urljoin(final_url, link['href'])
                     normalized_url = self.normalize_url(absolute_url)
@@ -87,7 +87,10 @@ class LinkChecker:
                         normalized_url != final_url and 
                         normalized_url not in links):
                         links.add(normalized_url)
-            
+                    if len(links) >= 100:  # Ограничение на количество ссылок с одной страницы
+                        break
+                soup.decompose()  # Очищаем память после парсинга
+            del response  # Явно освобождаем память
             return links, status_code, final_url
         except RequestException as e:
             print(f"Ошибка при проверке {url}: {e}")
@@ -96,104 +99,69 @@ class LinkChecker:
             print(f"Неизвестная ошибка при обработке {url}: {e}")
             return set(), "Unknown error", url
 
-    def is_processed(self, url):
+    def is_processed(self, url, conn):
         """Проверка, был ли URL уже обработан"""
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("SELECT url FROM processed_urls WHERE url = ?", (url,))
-            return c.fetchone() is not None
+        c = conn.cursor()
+        c.execute("SELECT url FROM processed_urls WHERE url = ?", (url,))
+        return c.fetchone() is not None
 
-    def add_processed_url(self, url):
+    def add_processed_url(self, url, conn):
         """Добавление URL в список обработанных"""
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("INSERT OR IGNORE INTO processed_urls (url) VALUES (?)", (url,))
-            conn.commit()
+        c = conn.cursor()
+        c.execute("INSERT OR IGNORE INTO processed_urls (url) VALUES (?)", (url,))
 
-    def save_node(self, url, status, redirected_from=None, parent_url=None):
+    def save_node(self, url, status, depth, redirected_from=None, parent_url=None, conn=None):
         """Сохранение узла в базу данных"""
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("""
-                INSERT OR REPLACE INTO nodes (url, status, redirected_from, parent_url)
-                VALUES (?, ?, ?, ?)
-            """, (url, status, redirected_from, parent_url))
-            conn.commit()
-
-    def get_node(self, url):
-        """Получение узла из базы данных"""
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("SELECT url, status, redirected_from, parent_url FROM nodes WHERE url = ?", (url,))
-            result = c.fetchone()
-            if result:
-                return {"url": result[0], "status": result[1], "redirected_from": result[2], "parent_url": result[3]}
-            return None
+        c = conn.cursor()
+        c.execute("""
+            INSERT OR REPLACE INTO nodes (url, status, redirected_from, parent_url, depth)
+            VALUES (?, ?, ?, ?, ?)
+        """, (url, status, redirected_from, parent_url, depth))
 
     def build_sitemap(self):
-        # Проверяем, есть ли корневой узел в базе
         with sqlite3.connect(self.db_path) as conn:
             c = conn.cursor()
             c.execute("SELECT url FROM nodes WHERE url = ?", (self.base_url,))
             root_exists = c.fetchone() is not None
 
-        # Если корневого узла нет, начинаем с него
-        if not root_exists:
-            self.save_node(self.base_url, None, None, None)
-            self.add_processed_url(self.base_url)
-            queue = deque([(self.base_url, 0, None)])
-        else:
-            # Собираем все необработанные узлы с неизвестным статусом
-            queue = deque([])
-            with sqlite3.connect(self.db_path) as conn:
-                c = conn.cursor()
-                c.execute("SELECT url, parent_url FROM nodes WHERE status IS NULL")
-                for url, parent_url in c.fetchall():
-                    depth = self._get_depth(url)
+            if not root_exists:
+                self.save_node(self.base_url, None, 0, None, None, conn)
+                self.add_processed_url(self.base_url, conn)
+                conn.commit()
+                queue = deque([(self.base_url, 0, None)])
+            else:
+                queue = deque([])
+                c.execute("SELECT url, parent_url, depth FROM nodes WHERE status IS NULL")
+                for url, parent_url, depth in c.fetchall():
                     if depth < self.depth_limit:
                         queue.append((url, depth, parent_url))
 
-        while queue and self.url_count < self.url_count_limit:
-            current_url, depth, parent_url = queue.popleft()
-            
-            if depth > self.depth_limit:
-                print(f"Превышена глубина {depth} для {current_url}")
-                continue
+            while queue and self.url_count < self.url_count_limit:
+                current_url, depth, parent_url = queue.popleft()
+                
+                if depth > self.depth_limit:
+                    print(f"Превышена глубина {depth} для {current_url}")
+                    continue
 
-            self.url_count += 1
-            links, status, final_url = self.process_url(current_url)
-            
-            if final_url != current_url:
-                self.save_node(final_url, status, current_url, parent_url)
-            else:
-                self.save_node(current_url, status, None, parent_url)
+                self.url_count += 1
+                links, status, final_url = self.process_url(current_url)
+                
+                if final_url != current_url:
+                    self.save_node(final_url, status, depth, current_url, parent_url, conn)
+                else:
+                    self.save_node(current_url, status, depth, None, parent_url, conn)
+                self.add_processed_url(final_url, conn)
+                conn.commit()  # Фиксируем изменения после каждого URL
 
-            time.sleep(self.delay)
-
-            for link in links:
-                if not self.is_processed(link):
-                    self.save_node(link, None, None, final_url)
-                    self.add_processed_url(link)
-                    if depth + 1 <= self.depth_limit:
-                        queue.append((link, depth + 1, final_url))
+                for link in links:
+                    if not self.is_processed(link, conn):
+                        self.save_node(link, None, depth + 1, None, final_url, conn)
+                        self.add_processed_url(link, conn)
+                        if depth + 1 <= self.depth_limit:
+                            queue.append((link, depth + 1, final_url))
+                conn.commit()  # Фиксируем новые ссылки
 
         return self._build_json_sitemap()
-
-    def _get_depth(self, url):
-        """Определение глубины URL на основе цепочки родителей"""
-        depth = 0
-        current_url = url
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            while current_url:
-                c.execute("SELECT parent_url FROM nodes WHERE url = ?", (current_url,))
-                result = c.fetchone()
-                if result and result[0]:
-                    depth += 1
-                    current_url = result[0]
-                else:
-                    break
-        return depth
 
     def _build_json_sitemap(self):
         """Построение JSON структуры из базы данных"""
@@ -246,7 +214,7 @@ def main():
     parser.add_argument('url', help='URL сайта для проверки')
     parser.add_argument('--delay', type=float, default=1, help='Задержка между запросами (секунды)')
     parser.add_argument('--timeout', type=float, default=50, help='Таймаут запроса (секунды)')
-    parser.add_argument('--url-count-limit', type=int, default=10000000, help='Лимит URL для проверки')
+    parser.add_argument('--url-count-limit', type=int, default=20, help='Лимит URL для проверки')
     parser.add_argument('--depth-limit', type=int, default=1000, help='Максимальная глубина проверки')
     
     args = parser.parse_args()
