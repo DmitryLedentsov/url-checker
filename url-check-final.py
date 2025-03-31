@@ -48,7 +48,7 @@ class LinkChecker:
             content = b''
             for chunk in response.iter_content(1024*10):  # Read 10KB at a time
                 content += chunk
-                if len(content) > 1024*50:  # Stop after 50KB
+                if len(content) > 1024*5000:  # Stop after 50KB
                     break
             status_code = response.status_code
             final_url = self.normalize_url(response.url)
