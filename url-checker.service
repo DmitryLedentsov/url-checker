@@ -1,0 +1,13 @@
+[Unit]
+Description=url-checker
+After=multi-user.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+Restart=on-failure
+ExecStart=/usr/bin/python3 -u /home/url-checker/url-check-final.py https://www.roboform.com/ --delay 0.1
+WorkingDirectory=/home/url-checker
+[Install]
+WantedBy=multi-user.target

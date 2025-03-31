@@ -10,14 +10,24 @@ def load_sitemap(filename):
 
 def build_tree(data, parent_node=None):
     """Рекурсивно строит дерево из данных sitemap"""
+    # Формируем label для узла
+    if data.get('redirected_from'):
+        label = f"{data['redirected_from']} -> {data['url']}"
+    else:
+        label = data['url']
+    
+    # Добавляем статус, если он есть
+    if data.get('status') is not None:
+        label += f" ({data['status']})"
+    
     if parent_node is None:
-        root = Node(f"{data['url']} ({data['status']})")
-        for child in data['links']:
+        root = Node(label)
+        for child in data.get('links', []):
             build_tree(child, root)
         return root
     else:
-        child_node = Node(f"{data['url']} ({data['status']})", parent=parent_node)
-        for child in data['links']:
+        child_node = Node(label, parent=parent_node)
+        for child in data.get('links', []):
             build_tree(child, child_node)
 
 def visualize_tree(tree, output_format='text'):
