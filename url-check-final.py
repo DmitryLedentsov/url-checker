@@ -3,61 +3,37 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse, urldefrag
 import time
-import sqlite3
 import json
-import sys
-import os
-from requests.exceptions import RequestException
+from collections import deque
 
 class LinkChecker:
-    def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000, db_path='sitemap.db'):
+    def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000):
         self.base_url = self.normalize_url(base_url)
         self.domain = urlparse(self.base_url).netloc
+        self.visited = {}  # Хранит полные узлы
+        self.processed_urls = set()  # Отслеживает обработанные URL для предотвращения циклов
         self.delay = delay
         self.timeout = timeout
         self.url_count_limit = url_count_limit
         self.depth_limit = depth_limit
         self.url_count = 0
-        self.db_path = db_path
+        self.default_params = {
+            'delay': 1,
+            'timeout': 50,
+            'url_count_limit': 20,
+            'depth_limit': 1000
+        }
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
-        self._init_db()
-        print(f"Инициализация LinkChecker для {self.base_url}")
-
-    def _init_db(self):
-        """Инициализация SQLite базы данных"""
-        if not os.path.exists(self.db_path):
-            with sqlite3.connect(self.db_path) as conn:
-                c = conn.cursor()
-                c.execute('''
-                    CREATE TABLE IF NOT EXISTS nodes (
-                        url TEXT PRIMARY KEY,
-                        status TEXT,
-                        redirected_from TEXT,
-                        parent_url TEXT,
-                        depth INTEGER
-                    )
-                ''')
-                c.execute('''
-                    CREATE TABLE IF NOT EXISTS processed_urls (
-                        url TEXT PRIMARY KEY
-                    )
-                ''')
-                conn.commit()
-        else:
-            print(f"Используется существующая база данных: {self.db_path}")
 
     def normalize_url(self, url):
-        try:
-            if not url.startswith(('http://', 'https://')):
-                url = 'https://' + url
-            url, _ = urldefrag(url)
-            parsed = urlparse(url)
-            return f"{parsed.scheme}://{parsed.netloc}{parsed.path}".rstrip('/')
-        except Exception as e:
-            print(f"Ошибка нормализации URL {url}: {e}")
-            return url
+        """Remove fragment identifier and normalize URL"""
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url
+        url, _ = urldefrag(url)
+        parsed = urlparse(url)
+        return f"{parsed.scheme}://{parsed.netloc}{parsed.path}".rstrip('/')
 
     def is_valid_url(self, url):
         parsed = urlparse(url)
@@ -65,7 +41,15 @@ class LinkChecker:
 
     def process_url(self, url):
         try:
-            response = requests.get(url, headers=self.headers, timeout=self.timeout, allow_redirects=True)
+           # Add stream=True to prevent loading entire response into memory
+            response = requests.get(url, headers=self.headers, timeout=self.timeout, 
+                                 allow_redirects=True, stream=True)
+            # Read only the first X bytes to parse links
+            content = b''
+            for chunk in response.iter_content(1024*10):  # Read 10KB at a time
+                content += chunk
+                if len(content) > 1024*50:  # Stop after 50KB
+                    break
             status_code = response.status_code
             final_url = self.normalize_url(response.url)
             
@@ -78,8 +62,7 @@ class LinkChecker:
             
             links = set()
             if status_code == 200:
-                # Ограничиваем объем данных для парсинга
-                soup = BeautifulSoup(response.text[:1024*1024], 'html.parser')  # Ограничиваем до 1MB
+                soup = BeautifulSoup(content, 'html.parser')
                 for link in soup.find_all('a', href=True):
                     absolute_url = urljoin(final_url, link['href'])
                     normalized_url = self.normalize_url(absolute_url)
@@ -87,127 +70,81 @@ class LinkChecker:
                         normalized_url != final_url and 
                         normalized_url not in links):
                         links.add(normalized_url)
-                    if len(links) >= 100:  # Ограничение на количество ссылок с одной страницы
-                        break
-                soup.decompose()  # Очищаем память после парсинга
-            del response  # Явно освобождаем память
+            
             return links, status_code, final_url
-        except RequestException as e:
+        except requests.RequestException as e:
             print(f"Ошибка при проверке {url}: {e}")
             return set(), str(e), url
-        except Exception as e:
-            print(f"Неизвестная ошибка при обработке {url}: {e}")
-            return set(), "Unknown error", url
-
-    def is_processed(self, url, conn):
-        """Проверка, был ли URL уже обработан"""
-        c = conn.cursor()
-        c.execute("SELECT url FROM processed_urls WHERE url = ?", (url,))
-        return c.fetchone() is not None
-
-    def add_processed_url(self, url, conn):
-        """Добавление URL в список обработанных"""
-        c = conn.cursor()
-        c.execute("INSERT OR IGNORE INTO processed_urls (url) VALUES (?)", (url,))
-
-    def save_node(self, url, status, depth, redirected_from=None, parent_url=None, conn=None):
-        """Сохранение узла в базу данных"""
-        c = conn.cursor()
-        c.execute("""
-            INSERT OR REPLACE INTO nodes (url, status, redirected_from, parent_url, depth)
-            VALUES (?, ?, ?, ?, ?)
-        """, (url, status, redirected_from, parent_url, depth))
 
     def build_sitemap(self):
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("SELECT url FROM nodes WHERE url = ?", (self.base_url,))
-            root_exists = c.fetchone() is not None
+        queue = deque([(self.base_url, 0)])
+        root_node = {
+            "url": self.base_url,
+            "status": None,
+            "redirected_from": None,
+            "links": []
+        }
+        self.visited[self.base_url] = root_node
+        self.processed_urls.add(self.base_url)  # Добавляем начальный URL как обработанный
 
-            if not root_exists:
-                self.save_node(self.base_url, None, 0, None, None, conn)
-                self.add_processed_url(self.base_url, conn)
-                conn.commit()
-                queue = deque([(self.base_url, 0, None)])
-            else:
-                queue = deque([])
-                c.execute("SELECT url, parent_url, depth FROM nodes WHERE status IS NULL")
-                for url, parent_url, depth in c.fetchall():
-                    if depth < self.depth_limit:
-                        queue.append((url, depth, parent_url))
+        while queue and self.url_count < self.url_count_limit:
+            current_url, depth = queue.popleft()
+            
+            if depth > self.depth_limit:
+                continue
 
-            while queue and self.url_count < self.url_count_limit:
-                current_url, depth, parent_url = queue.popleft()
-                
-                if depth > self.depth_limit:
-                    print(f"Превышена глубина {depth} для {current_url}")
-                    continue
-
-                self.url_count += 1
-                links, status, final_url = self.process_url(current_url)
-                
-                if final_url != current_url:
-                    self.save_node(final_url, status, depth, current_url, parent_url, conn)
+            self.url_count += 1
+            links, status, final_url = self.process_url(current_url)
+            
+            if final_url != current_url:
+                if current_url in self.visited:
+                    node = self.visited.pop(current_url)
+                    node["url"] = final_url
+                    node["redirected_from"] = current_url
+                    self.visited[final_url] = node
                 else:
-                    self.save_node(current_url, status, depth, None, parent_url, conn)
-                self.add_processed_url(final_url, conn)
-                conn.commit()  # Фиксируем изменения после каждого URL
-
-                for link in links:
-                    if not self.is_processed(link, conn):
-                        self.save_node(link, None, depth + 1, None, final_url, conn)
-                        self.add_processed_url(link, conn)
-                        if depth + 1 <= self.depth_limit:
-                            queue.append((link, depth + 1, final_url))
-                conn.commit()  # Фиксируем новые ссылки
-
-        return self._build_json_sitemap()
-
-    def _build_json_sitemap(self):
-        """Построение JSON структуры из базы данных"""
-        with sqlite3.connect(self.db_path) as conn:
-            c = conn.cursor()
-            c.execute("SELECT url, status, redirected_from FROM nodes WHERE parent_url IS NULL")
-            root = c.fetchone()
-            if not root:
-                return {}
-
-            sitemap = {
-                "url": root[0],
-                "status": root[1],
-                "redirected_from": root[2],
-                "links": []
-            }
-
-            def add_children(parent_url, parent_node):
-                c.execute("SELECT url, status, redirected_from FROM nodes WHERE parent_url = ?", (parent_url,))
-                for child in c.fetchall():
-                    child_node = {
-                        "url": child[0],
-                        "status": child[1],
-                        "redirected_from": child[2],
+                    self.visited[final_url] = {
+                        "url": final_url,
+                        "status": status,
+                        "redirected_from": current_url,
                         "links": []
                     }
-                    parent_node["links"].append(child_node)
-                    add_children(child[0], child_node)
+            else:
+                self.visited[current_url]["status"] = status
+                if "redirected_from" not in self.visited[current_url]:
+                    self.visited[current_url]["redirected_from"] = None
 
-            add_children(root[0], sitemap)
-            return sitemap
+            time.sleep(self.delay)
+
+            for link in links:
+                # Проверяем, не был ли этот URL уже обработан
+                if link not in self.processed_urls:
+                    new_node = {
+                        "url": link,
+                        "status": None,
+                        "redirected_from": None,
+                        "links": []
+                    }
+                    self.visited[final_url]["links"].append(new_node)
+                    self.visited[link] = new_node
+                    self.processed_urls.add(link)  # Помечаем как обработанный
+                    if depth + 1 <= self.depth_limit:
+                        queue.append((link, depth + 1))
+
+        return root_node
 
     def start(self):
         print(f"Начинаем проверку сайта: {self.base_url}")
-        print(f"Параметры: delay={self.delay}s, timeout={self.timeout}s, "
+        print(f"Параметры: delay={self.delay}s, timeout={self.timeout}s, " +
               f"url_count_limit={self.url_count_limit}, depth_limit={self.depth_limit}")
         
-        try:
-            sitemap = self.build_sitemap()
-            with open('sitemap.json', 'w', encoding='utf-8') as f:
-                json.dump(sitemap, f, ensure_ascii=False, indent=2)
-            print("\nРезультаты сохранены в sitemap.json")
-            return sitemap
-        except Exception as e:
-            print(f"Ошибка при сохранении результатов: {e}")
-            raise
+        sitemap = self.build_sitemap()
+        
+        with open('sitemap.json', 'w', encoding='utf-8') as f:
+            json.dump(sitemap, f, ensure_ascii=False, indent=2)
+        
+        print("\nРезультаты сохранены в sitemap.json")
+        return sitemap
 
 def main():
     parser = argparse.ArgumentParser(description='Проверка ссылок на сайте')
@@ -227,11 +164,7 @@ def main():
         depth_limit=args.depth_limit
     )
 
-    try:
-        checker.start()
-    except Exception as e:
-        print(f"Служба завершилась с ошибкой: {e}")
-        sys.exit(1)
+    checker.start()
 
 if __name__ == "__main__":
     main()
