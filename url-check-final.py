@@ -214,7 +214,7 @@ def main():
     parser.add_argument('url', help='URL сайта для проверки')
     parser.add_argument('--delay', type=float, default=1, help='Задержка между запросами (секунды)')
     parser.add_argument('--timeout', type=float, default=50, help='Таймаут запроса (секунды)')
-    parser.add_argument('--url-count-limit', type=int, default=20, help='Лимит URL для проверки')
+    parser.add_argument('--url-count-limit', type=int, default=1000000, help='Лимит URL для проверки')
     parser.add_argument('--depth-limit', type=int, default=1000, help='Максимальная глубина проверки')
     
     args = parser.parse_args()
