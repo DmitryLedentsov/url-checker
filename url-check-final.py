@@ -7,7 +7,7 @@ import json
 from collections import deque
 
 class LinkChecker:
-    def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000):
+    def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000,file="sitemap.json"):
         self.base_url = self.normalize_url(base_url)
         self.domain = urlparse(self.base_url).netloc
         self.visited = {}  # Хранит полные узлы
@@ -16,6 +16,7 @@ class LinkChecker:
         self.timeout = timeout
         self.url_count_limit = url_count_limit
         self.depth_limit = depth_limit
+        self.output_file = file
         self.url_count = 0
         self.default_params = {
             'delay': 1,
@@ -139,10 +140,10 @@ class LinkChecker:
         
         sitemap = self.build_sitemap()
         
-        with open('sitemap.json', 'w', encoding='utf-8') as f:
+        with open(self.output_file, 'w', encoding='utf-8') as f:
             json.dump(sitemap, f, ensure_ascii=False, indent=2)
         
-        print("\nРезультаты сохранены в sitemap.json")
+        print("\nРезультаты сохранены в "+self.output_file)
         return sitemap
 
 def main():
@@ -152,6 +153,7 @@ def main():
     parser.add_argument('--timeout', type=float, default=50, help='Таймаут запроса (секунды)')
     parser.add_argument('--url-count-limit', type=int, default=1000000, help='Лимит URL для проверки')
     parser.add_argument('--depth-limit', type=int, default=1000, help='Максимальная глубина проверки')
+    parser.add_argument('--output', default="sitemap.json", help='Файл')
     
     args = parser.parse_args()
 
