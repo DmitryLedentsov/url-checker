@@ -41,14 +41,13 @@ class LinkChecker:
 
     def process_url(self, url):
         try:
-           # Add stream=True to prevent loading entire response into memory
             response = requests.get(url, headers=self.headers, timeout=self.timeout, 
                                  allow_redirects=True, stream=True)
-            # Read only the first X bytes to parse links
+            #костыль для ограничения размера ответа
             content = b''
-            for chunk in response.iter_content(1024*10):  # Read 10KB at a time
+            for chunk in response.iter_content(1024*10):  # читаем фрагментами по 10кб за раз
                 content += chunk
-                if len(content) > 1024*5000:  # Stop after 50KB
+                if len(content) > 1024*1024*2:  #максимум 2мб
                     break
             status_code = response.status_code
             final_url = self.normalize_url(response.url)
@@ -85,7 +84,7 @@ class LinkChecker:
             "links": []
         }
         self.visited[self.base_url] = root_node
-        self.processed_urls.add(self.base_url)  # Добавляем начальный URL как обработанный
+        self.processed_urls.add(self.base_url)  # Добавляем начальный урл
 
         while queue and self.url_count < self.url_count_limit:
             current_url, depth = queue.popleft()
