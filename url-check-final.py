@@ -10,7 +10,7 @@ class LinkChecker:
     def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000,file="sitemap.json"):
         self.base_url = self.normalize_url(base_url)
         self.domain = urlparse(self.base_url).netloc
-        self.visited = {}  # Хранит полные узлы
+        self.sitemap = {}  # Хранит полные узлы
         self.processed_urls = set()  # Отслеживает обработанные URL для предотвращения циклов
         self.delay = delay
         self.timeout = timeout
@@ -84,7 +84,7 @@ class LinkChecker:
             "redirected_from": None,
             "links": []
         }
-        self.visited[self.base_url] = root_node
+        self.sitemap[self.base_url] = root_node
         self.processed_urls.add(self.base_url)  # Добавляем начальный урл
 
         while queue and self.url_count < self.url_count_limit:
@@ -96,23 +96,23 @@ class LinkChecker:
             self.url_count += 1
             links, status, final_url = self.process_url(current_url)
             
-            if final_url != current_url:
-                if current_url in self.visited:
-                    node = self.visited.pop(current_url)
+            if final_url != current_url: #обрабатываем редирект
+                if current_url in self.sitemap:
+                    node = self.sitemap.pop(current_url)
                     node["url"] = final_url
                     node["redirected_from"] = current_url
-                    self.visited[final_url] = node
+                    self.sitemap[final_url] = node
                 else:
-                    self.visited[final_url] = {
+                    self.sitemap[final_url] = {
                         "url": final_url,
                         "status": status,
                         "redirected_from": current_url,
                         "links": []
                     }
             else:
-                self.visited[current_url]["status"] = status
-                if "redirected_from" not in self.visited[current_url]:
-                    self.visited[current_url]["redirected_from"] = None
+                self.sitemap[current_url]["status"] = status
+                if "redirected_from" not in self.sitemap[current_url]:
+                    self.sitemap[current_url]["redirected_from"] = None
 
             time.sleep(self.delay)
 
@@ -125,8 +125,8 @@ class LinkChecker:
                         "redirected_from": None,
                         "links": []
                     }
-                    self.visited[final_url]["links"].append(new_node)
-                    self.visited[link] = new_node
+                    self.sitemap[final_url]["links"].append(new_node)
+                    self.sitemap[link] = new_node
                     self.processed_urls.add(link)  # Помечаем как обработанный
                     if depth + 1 <= self.depth_limit:
                         queue.append((link, depth + 1))
