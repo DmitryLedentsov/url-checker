@@ -4,10 +4,120 @@
   "redirected_from": null,
   "links": [
     {
-      "url": "https://www.roboform.com/family",
+      "url": "https://www.roboform.com/pl",
       "status": 200,
       "redirected_from": null,
-      "links": []
+      "links": [
+        {
+          "url": "https://www.roboform.com/pl/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/pricing-business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/pl/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/business/benefits",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
+        {
+          "url": "https://www.roboform.com/php/pums/rfprepay.php",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
     },
     {
       "url": "https://www.roboform.com/pricing-personal",
@@ -16,335 +126,103 @@
       "links": []
     },
     {
-      "url": "https://www.roboform.com/1password-alternative",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/de",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/de/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/manual",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/de/manual",
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/de/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/news-edge",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/de/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/de/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
       "url": "https://www.roboform.com/es",
       "status": 200,
       "redirected_from": null,
       "links": [
         {
-          "url": "https://www.roboform.com/es/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
           "url": "https://www.roboform.com/es/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/pricing-personal",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/es/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/es/dashlane-alternative",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/es/1password-alternative",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/es/business/benefits",
-          "status": 200,
+          "url": "https://www.roboform.com/es/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/password-generator",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/es/security",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/es/download",
-          "status": 200,
+          "url": "https://www.roboform.com/es/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/es/premium",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/es/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/military-discount",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/it",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/it/premium",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/it/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/it/passphrase-generator",
-          "status": 200,
+          "url": "https://www.roboform.com/es/download",
+          "status": null,
           "redirected_from": null,
           "links": []
         }
@@ -357,610 +235,39 @@
       "links": []
     },
     {
-      "url": "https://www.roboform.com/tutorials",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/form-filler",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/nl",
+      "url": "https://www.roboform.com/download",
       "status": 200,
       "redirected_from": null,
       "links": [
         {
-          "url": "https://www.roboform.com/nl/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/nl/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/privacy-policy",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/jp",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/jp/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/jp/business/contact-us",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/jp/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/jp/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/password-generator",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/br",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/br/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/br/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/pricing-business",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/business/contact-us",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/passphrase-generator",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/business",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/locations",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/manual-ios",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/pdf/manual-ios.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/manual-mac",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/pdf/manual-mac.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://online.roboform.com/login",
+          "url": "https://www.roboform.com/news-ext-firefox",
           "status": null,
-          "redirected_from": "https://www.roboform.com/php/rtss/main&lang=en",
-          "links": [
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/business/overview",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/php/rtss/main/contact",
-              "status": 200,
-              "redirected_from": null,
-              "links": [
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/password-spreadsheet-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/business",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/business/features",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/security",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/business/security",
-                  "links": []
-                },
-                {
-                  "url": "https://online.roboform.com/login",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/php/rtss/main",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/edge-password-manager-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/browser-password-manager-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/password-manager",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/pricing-business",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/business/compare",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/google-passwords-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/press",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/awards-and-reviews",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/business",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/business/how-it-works",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/firefox-password-manager-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/apple-keychain-safari-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/password-book-alternative",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com/pricing-business",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/business/pricing",
-                  "links": []
-                },
-                {
-                  "url": "https://www.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/ie-password-manager-alternative",
-                  "links": []
-                }
-              ]
-            }
-          ]
+          "redirected_from": null,
+          "links": []
         },
         {
-          "url": "https://www.roboform.com/manual-v7",
-          "status": 200,
+          "url": "https://www.roboform.com/news-ext-chrome",
+          "status": null,
           "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/premium",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/en/everywhere",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/PrintListPasscards-7.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/CustomizeMenu-7.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/premium",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/everywhere/security",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/premium",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/en/everywhere/security",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/pdf/manual.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/filling-test-custom-fields",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/premium",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/everywhere",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/en/support",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
+          "links": []
         },
         {
-          "url": "https://www.roboform.com/manual-android",
-          "status": 200,
+          "url": "https://www.roboform.com/news-windows",
+          "status": null,
           "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/pdf/manual-android.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/business/benefits",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
+          "links": []
+        },
         {
-          "url": "https://www.roboform.com/php/pums/rfprepay.php",
-          "status": 200,
+          "url": "https://www.roboform.com/dist/RoboForm-v9-Setup.exe",
+          "status": null,
           "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/php/pums/&%7BoProduct%5Blink%5D%7D",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/php/pums/&{oProduct[link]}",
-              "links": []
-            }
-          ]
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/dist/RoboForm-v9-Enterprise.msi",
+          "status": null,
+          "redirected_from": null,
+          "links": []
         }
       ]
     },
@@ -970,1122 +277,232 @@
       "redirected_from": null,
       "links": [
         {
-          "url": "https://www.roboform.com/affiliates/agreement",
-          "status": 200,
+          "url": "https://www.roboform.com/php/ams/ams_regfrm.php",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/php/ams/ams_logfrm.php",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com",
-              "status": null,
-              "redirected_from": "http://www.roboform.com",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/affiliates/contacts",
-              "status": null,
-              "redirected_from": "http://www.roboform.com/affiliates/contacts",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/affiliates",
-              "status": null,
-              "redirected_from": "http://www.roboform.com/affiliates/details",
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/php/ams/ams_regfrm.php",
-          "status": 400,
+          "url": "https://www.roboform.com/affiliates/agreement",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/affiliates/contacts",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/zh",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/zh/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/zh/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/fr",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/fr/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/fr/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/pl",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/pl/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pl/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/testimonials",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/support",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/premium",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/resellers",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/press",
           "status": null,
-          "redirected_from": "https://www.roboform.com/about/awards-and-reviews",
+          "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/press-releases",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/press-releases/02-02-2015-national-change-your-password-day",
-              "status": 200,
-              "redirected_from": null,
-              "links": [
-                {
-                  "url": "https://www.roboform.com/lp",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/change",
-                  "links": []
-                }
-              ]
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_Trust_Survey_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20140916_Siber_Systems_Multifactor_Authentication_Press_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_Vista_Support_Release_021207.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_RoboForm_Phishing_Release_062405_Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/RoboForm_Enterprise_051107_Final.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20150120_Siber_Systems_RoboForm_University_Press_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/roboform-version-6-released",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/RoboForm_6_6_Release_Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Pass2Go_Release--FINAL.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_SearchCards_Release-Rev1_122007_Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/2008_0917_Siber-Interop_08_Release.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20130110_Siber_Cyber_Security_Awareness_Month_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20141016_Siber_Systems_Three_New_Tools_Press_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/Siber--RSA%20Conference%202009%20Release-FINAL.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/RF_Enterprise_Survey_Release_2008_0213_Final.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20170417-roboform-8-official-debut",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/U3_Release_060805_final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/150219-Password-Survey-Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/RoboForm_Enterprise-Top_5.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_M-Systems_U3_Release_060805.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Pass2Go_U3_Release_092105a.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20132802_Roboform_Start_Page.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/RSA_Conference_2008_0403_Final.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/20140128_Siber_Systems_RoboForm_Windows_Phone_Press_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/business",
-              "status": null,
-              "redirected_from": "https://www.roboform.com/enterprise/press-releases/2009_0512_M_Financial_Case_Study_Release_Site.pdf",
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Siber_West_Volusia_Realtors_Release-20110513_Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/RoboForm7Release_Final.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/RoboForm_Online_Debut_Release_080409.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/press-releases/Cyber_Security_Awareness_Release.pdf",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/locations",
+          "url": "https://www.roboform.com/php/ams/ams_logfrm.php",
           "status": null,
-          "redirected_from": "https://www.roboform.com/support/locations",
+          "redirected_from": null,
           "links": []
-        },
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/br",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
         {
-          "url": "https://www.roboform.com/resellers",
+          "url": "https://www.roboform.com/br/lastpass-alternative",
           "status": null,
-          "redirected_from": "https://www.roboform.com/about/resellers",
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/how-secure-is-my-password",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/about",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/manual",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/pdf/manual-windows.pdf",
-          "status": 200,
           "redirected_from": null,
           "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/license",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/press",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/press-kit",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_alternative_color.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_alternative_white.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/RF-StartScreen-LightMode.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-black-big.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_white.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color_white.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_logo_alternative_color.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-white-big.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color_white.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color_white.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_white.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-white-big.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_symbol_color.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-white-big.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_white.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_color.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_logo_color.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/RF-StartScreen-DarkMode.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_symbol_color.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_alternative_white.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_symbol_color.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-black-big.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_logo_color.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/rf_logo_alternative_color.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf-logo-business-black-big.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color.psd",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_fb_alternative_color.png",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/new_presskit/rf_logo_alternative_white.ai",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/images/presskit/presskit.zip",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            }
-          ]
         },
         {
-          "url": "https://www.roboform.com/pdf/RoboForm-Product-Reviewers-Guide.pdf",
-          "status": 200,
+          "url": "https://www.roboform.com/br/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/br/pricing-business",
+          "status": null,
           "redirected_from": null,
           "links": []
         }
       ]
     },
     {
-      "url": "https://www.roboform.com/cn",
+      "url": "https://www.roboform.com/de",
       "status": 200,
       "redirected_from": null,
       "links": [
         {
-          "url": "https://www.roboform.com/cn/family",
-          "status": 200,
+          "url": "https://www.roboform.com/de/lastpass-alternative",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/pricing-personal",
-          "status": 200,
+          "url": "https://www.roboform.com/de/business/benefits",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/passphrase-generator",
-          "status": 200,
+          "url": "https://www.roboform.com/de/premium",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/security",
-          "status": 200,
+          "url": "https://www.roboform.com/de/security",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/business/benefits",
-          "status": 200,
+          "url": "https://www.roboform.com/de/passphrase-generator",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/premium",
-          "status": 200,
+          "url": "https://www.roboform.com/de/how-secure-is-my-password",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/how-secure-is-my-password",
-          "status": 200,
+          "url": "https://www.roboform.com/de/business",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/pricing-business",
-          "status": 200,
+          "url": "https://www.roboform.com/de/dashlane-alternative",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/dashlane-alternative",
-          "status": 200,
+          "url": "https://www.roboform.com/de/password-generator",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/lastpass-alternative",
-          "status": 200,
+          "url": "https://www.roboform.com/de/support",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/password-generator",
-          "status": 200,
+          "url": "https://www.roboform.com/de/pricing-personal",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/support",
-          "status": 200,
+          "url": "https://www.roboform.com/de/pricing-business",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/form-filler",
-          "status": 200,
+          "url": "https://www.roboform.com/de/form-filler",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/1password-alternative",
-          "status": 200,
+          "url": "https://www.roboform.com/de/1password-alternative",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/business",
-          "status": 200,
+          "url": "https://www.roboform.com/de/download",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/cn/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/lastpass-alternative",
-      "status": 200,
-      "redirected_from": null,
-      "links": []
-    },
-    {
-      "url": "https://www.roboform.com/security",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/pdf/RoboForm_Security_White_Paper.pdf",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/pdf/SecfaultSecurity_Summary_Pentesting_2025_v1.0.pdf",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/download",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/news-ext-chrome",
-          "status": 200,
-          "redirected_from": null,
-          "links": [
-            {
-              "url": "https://www.roboform.com/news-start-page",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/news-android",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/news-mac",
-              "status": 200,
-              "redirected_from": null,
-              "links": []
-            },
-            {
-              "url": "https://www.roboform.com/news-ios",
-              "status": 200,
-              "redirected_from": null,
-              "links": [
-                {
-                  "url": "https://blog.roboform.com",
-                  "status": null,
-                  "redirected_from": "https://www.roboform.com/blog/using-roboform-with-safari-on-your-iOS-device",
-                  "links": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "url": "https://www.roboform.com/dist/RoboForm-v9-Enterprise.msi",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/news-ext-firefox",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/dist/RoboForm-v9-Setup.exe",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/news-windows",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        }
-      ]
-    },
-    {
-      "url": "https://www.roboform.com/se",
-      "status": 200,
-      "redirected_from": null,
-      "links": [
-        {
-          "url": "https://www.roboform.com/se/pricing-business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/1password-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/business/benefits",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/premium",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/how-secure-is-my-password",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/se/business",
-          "status": 200,
+          "url": "https://www.roboform.com/de/family",
+          "status": null,
           "redirected_from": null,
           "links": []
         }
@@ -2097,98 +514,201 @@
       "redirected_from": null,
       "links": [
         {
-          "url": "https://www.roboform.com/ru/password-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/premium",
-          "status": 200,
+          "url": "https://www.roboform.com/ru/security",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/ru/support",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/form-filler",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/download",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/dashlane-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/passphrase-generator",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/pricing-personal",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/security",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/lastpass-alternative",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/family",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/business",
-          "status": 200,
-          "redirected_from": null,
-          "links": []
-        },
-        {
-          "url": "https://www.roboform.com/ru/business/benefits",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/ru/pricing-business",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
-          "url": "https://www.roboform.com/ru/1password-alternative",
-          "status": 200,
+          "url": "https://www.roboform.com/ru/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/form-filler",
+          "status": null,
           "redirected_from": null,
           "links": []
         },
         {
           "url": "https://www.roboform.com/ru/how-secure-is-my-password",
-          "status": 200,
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/ru/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/cn",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
+        {
+          "url": "https://www.roboform.com/cn/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/pricing-business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/cn/1password-alternative",
+          "status": null,
           "redirected_from": null,
           "links": []
         }
@@ -2201,11 +721,470 @@
       "links": [
         {
           "url": "https://www.roboform.com/promotions/college-verify",
-          "status": 200,
+          "status": null,
           "redirected_from": null,
           "links": []
         }
       ]
+    },
+    {
+      "url": "https://www.roboform.com/se",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
+        {
+          "url": "https://www.roboform.com/se/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/pricing-business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/se/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/premium",
+      "status": 200,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/it",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
+        {
+          "url": "https://www.roboform.com/it/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/pricing-business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/it/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/nl",
+      "status": 200,
+      "redirected_from": null,
+      "links": [
+        {
+          "url": "https://www.roboform.com/nl/1password-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/pricing-business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/premium",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/how-secure-is-my-password",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/password-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/support",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/form-filler",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/pricing-personal",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/security",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/download",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/dashlane-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/lastpass-alternative",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/passphrase-generator",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/business/benefits",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/business",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        },
+        {
+          "url": "https://www.roboform.com/nl/family",
+          "status": null,
+          "redirected_from": null,
+          "links": []
+        }
+      ]
+    },
+    {
+      "url": "https://www.roboform.com/password-generator",
+      "status": 200,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/testimonials",
+      "status": 200,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/1password-alternative",
+      "status": 200,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/family",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/form-filler",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/zh",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/fr",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/security",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/pricing-business",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/support",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/resellers",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/jp",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/military-discount",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/about",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/locations",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/press",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/tutorials",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/business",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/how-secure-is-my-password",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/manual",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/privacy-policy",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/passphrase-generator",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/license",
+      "status": null,
+      "redirected_from": null,
+      "links": []
+    },
+    {
+      "url": "https://www.roboform.com/lastpass-alternative",
+      "status": null,
+      "redirected_from": null,
+      "links": []
     }
   ]
 }
