@@ -116,7 +116,11 @@ class LinkChecker:
             url = 'https://' + url
         url, _ = urldefrag(url)
         parsed = urlparse(url)
-        return f"{parsed.scheme}://{parsed.netloc}{parsed.path}".rstrip('/')
+        # Сохраняем конечный слэш, если он был в исходном URL
+        path = parsed.path
+        if url.endswith('/') and not path.endswith('/'):
+            path += '/'
+        return f"{parsed.scheme}://{parsed.netloc}{path}"
 
     def is_valid_url(self, url):
         parsed = urlparse(url)
