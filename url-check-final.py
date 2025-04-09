@@ -15,13 +15,13 @@ class DatabaseManager:
     def _init_db(self):
         with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
-            # Таблица для processed_urls
+            # все посещенные ссылки
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS processed_urls (
                     url TEXT PRIMARY KEY
                 )
             ''')
-            # Таблица для sitemap
+            # карта сайта
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS sitemap (
                     url TEXT PRIMARY KEY,
@@ -34,7 +34,6 @@ class DatabaseManager:
             conn.commit()
 
     def clear_db(self):
-        """Очистка всех данных из таблиц"""
         with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
             cursor.execute('DELETE FROM processed_urls')
@@ -96,7 +95,7 @@ class DatabaseManager:
             
             return build_node(root_url)
 
-class LinkChecker:
+class UrlChecker:
     def __init__(self, base_url, delay=1, timeout=50, url_count_limit=20, depth_limit=1000, file="sitemap.json"):
         self.base_url = self.normalize_url(base_url)
         self.domain = urlparse(self.base_url).netloc
@@ -116,7 +115,7 @@ class LinkChecker:
             url = 'https://' + url
         url, _ = urldefrag(url)
         parsed = urlparse(url)
-        # Сохраняем конечный слэш, если он был в исходном URL
+        # если вконце слэш
         path = parsed.path
         if url.endswith('/') and not path.endswith('/'):
             path += '/'
@@ -131,14 +130,14 @@ class LinkChecker:
             response = requests.get(url, headers=self.headers, timeout=self.timeout, 
                                  allow_redirects=True, stream=True)
             content = b''
-            for chunk in response.iter_content(1024*10):
+            for chunk in response.iter_content(1024*10):#читаем блоками по 2кб до 10мб
                 content += chunk
                 if len(content) > 1024*1024*2:
                     break
             status_code = response.status_code
             final_url = self.normalize_url(response.url)
             
-            if response.history:
+            if response.history: #если редирект
                 for redirect in response.history:
                     print(f"Перенаправление: {redirect.url} -> {redirect.status_code}")
                 print(f"Конечный URL: {final_url} - Статус: {status_code}")
@@ -162,7 +161,7 @@ class LinkChecker:
             return set(), str(e), url
 
     def build_sitemap(self):
-        queue = deque([(self.base_url, 0)])
+        queue = deque([(self.base_url, 0)])#(урл,глубина)
         self.db.add_sitemap_node(self.base_url)
         self.db.add_processed_url(self.base_url)
 
@@ -175,7 +174,7 @@ class LinkChecker:
             self.url_count += 1
             links, status, final_url = self.process_url(current_url)
             
-            if final_url != current_url:
+            if final_url != current_url:#если редирект
                 self.db.add_sitemap_node(final_url, status, current_url, None)
             else:
                 self.db.update_node_status(current_url, status)
@@ -194,6 +193,7 @@ class LinkChecker:
         print(f"Параметры: delay={self.delay}s, timeout={self.timeout}s, " +
               f"url_count_limit={self.url_count_limit}, depth_limit={self.depth_limit}")
         
+        self.db.clear_db()
         self.build_sitemap()
         sitemap = self.db.get_sitemap_json(self.base_url)
         
@@ -214,7 +214,7 @@ def main():
     
     args = parser.parse_args()
 
-    checker = LinkChecker(
+    checker = UrlChecker(
         args.url,
         delay=args.delay,
         timeout=args.timeout,

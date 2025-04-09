@@ -1,0 +1,36 @@
+digraph tree {
+    rankdir=LR
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1615/badelt_kristof.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1419/gunko_yuriy_kuzmich.htm (200)" [];
+    "https://itmo.ru/ru/viewfaculty/17/institut_mezhdunarodnogo_razvitiya_i_partnerstva.htm (200)" [];
+    "https://itmo.ru/ru/viewunit/96991/uchebno-vystavochnyy_centr_iskusstva_i_nauki.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1307/zhang_ksi-cheng.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1311/styuart_debra.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/695/kozlova_darya_konstantinovna.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1410/vey_chzhao.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/397/kivshar_yuriy_semenovich.htm (200)" [];
+    "https://itmo.ru/event/2060 (404)" [color=red, style=filled, fillcolor="#ffdddd"];
+    "https://itmo.ru/ru/viewperson/1313/urbah_pol.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1411/saybolt_noorda.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1310/sloot_piter.htm (200)" [];
+    "https://itmo.ru/ru/viewperson/1308/komri_endryu.htm (200)" [];
+    "https://itmo.ru/ru/viewfaculty/108/fizicheskiy_fakultet.htm (200)" [];
+    "https://itmo.ru/ru/viewdepartment/487/inzhiniringovyy_centr_m2m_telemehanika_i_priborostroenie.htm (200)" [];
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1615/badelt_kristof.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1419/gunko_yuriy_kuzmich.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewfaculty/17/institut_mezhdunarodnogo_razvitiya_i_partnerstva.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1307/zhang_ksi-cheng.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1311/styuart_debra.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/695/kozlova_darya_konstantinovna.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1410/vey_chzhao.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/397/kivshar_yuriy_semenovich.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1313/urbah_pol.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1411/saybolt_noorda.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1310/sloot_piter.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewperson/1308/komri_endryu.htm (200)";
+    "https://itmo.ru/ru/page/249/mezhdunarodnyy_sovet.htm (200)" -> "https://itmo.ru/ru/viewfaculty/108/fizicheskiy_fakultet.htm (200)";
+    "https://itmo.ru/ru/viewfaculty/17/institut_mezhdunarodnogo_razvitiya_i_partnerstva.htm (200)" -> "https://itmo.ru/ru/viewunit/96991/uchebno-vystavochnyy_centr_iskusstva_i_nauki.htm (200)";
+    "https://itmo.ru/ru/viewperson/397/kivshar_yuriy_semenovich.htm (200)" -> "https://itmo.ru/event/2060 (404)";
+    "https://itmo.ru/ru/viewfaculty/108/fizicheskiy_fakultet.htm (200)" -> "https://itmo.ru/ru/viewdepartment/487/inzhiniringovyy_centr_m2m_telemehanika_i_priborostroenie.htm (200)";
+}
