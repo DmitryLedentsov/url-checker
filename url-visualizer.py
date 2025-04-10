@@ -17,13 +17,18 @@ def build_tree(data, parent_node=None):
     if status is not None:
         label += f" ({status})"
     
+    # Add search result info if present
+    result = data.get('result')
+    if result == 'FOUND':
+        label += " [TEXT FOUND]"
+    
     if parent_node is None:
-        root = Node(label, status=status, original_url=data['url'])
+        root = Node(label, status=status, original_url=data['url'], result=result)
         for child in data.get('links', []):
             build_tree(child, root)
         return root
     else:
-        child_node = Node(label, parent=parent_node, status=status, original_url=data['url'])
+        child_node = Node(label, parent=parent_node, status=status, original_url=data['url'], result=result)
         for child in data.get('links', []):
             build_tree(child, child_node)
 
@@ -31,13 +36,35 @@ def find_start_node(tree, start_url):
     """Находит узел по URL или части URL"""
     return find_by_attr(tree, name='original_url', value=start_url)
 
+def check_int(s):
+    return str(s).isdigit()
+
 def nodeattrfunc(node):
+    """Функция для определения атрибутов узла в Graphviz"""
+    attrs = []
+    
+    # Status-based styling
     if node.status is not None:
-        if node.status >= 400 and node.status < 500:
-            return 'color=red, style=filled, fillcolor="#ffdddd"'
-        elif node.status >= 500:
-            return 'color=red, style=filled, fillcolor="#ffaaaa"'
-    return ''
+        if not check_int(node.status):  # client side error
+            attrs.append('color=red')
+            attrs.append('style=filled')
+            attrs.append('fillcolor="#ffea00"')
+        elif int(node.status) >= 400 and int(node.status) < 500:  # 4xx - клиентские ошибки
+            attrs.append('color=red')
+            attrs.append('style=filled')
+            attrs.append('fillcolor="#ffdddd"')
+        elif int(node.status) >= 500:  # 5xx - серверные ошибки
+            attrs.append('color=red')
+            attrs.append('style=filled')
+            attrs.append('fillcolor="#ffaaaa"')
+    
+    # Search result styling
+    if hasattr(node, 'result') and node.result == 'FOUND':
+        attrs.append('style=filled')
+        attrs.append('fillcolor="#ae00ff"')
+        attrs.append('color=red')
+    
+    return ', '.join(attrs) if attrs else ''
 
 def visualize_tree(tree, output_format='text'):
     if output_format == 'text':
@@ -66,6 +93,7 @@ def main():
     try:
         sitemap_data = load_sitemap(args.input)
         full_tree = build_tree(sitemap_data)
+        
         # Если указан аргумент --start, находим соответствующую ноду
         if args.start:
             start_node = find_start_node(full_tree, args.start)
